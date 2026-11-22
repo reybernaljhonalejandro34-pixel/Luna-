@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,13 +35,12 @@ section{padding:66px 20px;max-width:980px;margin:auto}
 .lead{text-align:center;max-width:680px;margin:0 auto 30px;line-height:1.8;font-size:17px}
 .note{background:#fff;border:1px solid #f4d5df;border-radius:22px;padding:28px;box-shadow:0 10px 35px #9c657515;line-height:1.9;font-size:18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
-.photo{background:white;padding:10px 10px 18px;border-radius:16px;box-shadow:0 9px 24px #8053661b;transform:rotate(var(--tilt,0deg))}
+.photo{background:white;padding:10px 10px 18px;border-radius:16px;box-shadow:0 9px 24px #8053661b;transform:rotate(var(--tilt,0deg));}
 .photo img{width:100%;height:290px;object-fit:cover;border-radius:10px;display:block}
 .caption{text-align:center;margin:12px 4px 0;font-style:italic;color:#946075}
 .counter{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:26px 0}
 .unit{background:#fff;border:1px solid #f1cbd7;border-radius:18px;min-width:105px;padding:17px 14px;text-align:center;box-shadow:0 8px 22px #9c657510}
-.num{display:block;font:bold 32px Arial,sans-serif;color:#bd6686}
-.small{font:11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#946075}
+.num{display:block;font: bold 32px Arial,sans-serif;color:#bd6686}.small{font:11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#946075}
 .song{max-width:650px;margin:auto;text-align:center;background:#fff;border:1px dashed #df9db4;border-radius:22px;padding:28px;line-height:1.8}
 .tape{font-size:48px;margin-bottom:8px}
 .final{background:linear-gradient(145deg,#6b4656,#9b6278);color:#fff7fa;text-align:center;padding:72px 22px;border-radius:30px;margin:25px 20px 65px}
@@ -54,82 +52,72 @@ footer{text-align:center;padding:25px;color:#a77c8c;font-size:13px}
 </style>
 </head>
 <body>
-
 <header class="hero" id="inicio">
-<div class="card">
-<div class="kitty" aria-label="gatita con moño decorativa">
-<span class="eye l"></span><span class="eye r"></span>
-<span class="nose"></span><span class="whisk l"></span>
-<span class="whisk r"></span><span class="bow"></span>
-</div>
-<div class="eyebrow">Un detalle hecho con amor</div>
-<h1>Andry <span style="font-size:.55em;color:#d78aa4">&</span> Alejandro</h1>
-<p class="subtitle">No es una fecha especial. Es una forma de recordarte lo bonito que ha sido encontrarte y lo mucho que deseo seguir compartiendo momentos contigo. ♡</p>
-<button class="btn" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">Descubre nuestra historia ♡</button>
-</div>
+  <div class="card">
+    <div class="kitty" aria-label="gatita con moño decorativa"><span class="eye l"></span><span class="eye r"></span><span class="nose"></span><span class="whisk l"></span><span class="whisk r"></span><span class="bow"></span></div>
+    <div class="eyebrow">Un detalle hecho con amor</div>
+    <h1>Andry <span style="font-size:.55em;color:#d78aa4">&</span> Alejandro</h1>
+    <p class="subtitle">No es una fecha especial. Es una forma de recordarte lo bonito que ha sido encontrarte y lo mucho que deseo seguir compartiendo momentos contigo. ♡</p>
+    <button class="btn" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">Descubre nuestra historia ♡</button>
+  </div>
 </header>
 
 <section id="historia">
-<h2 class="section-title">Nuestra historia</h2>
-<p class="lead">Desde el 25 de agosto de 2025 comenzó este capítulo que hoy quiero seguir escribiendo contigo.</p>
-<div class="note">
-Puede que no todo haya sido perfecto, pero cada risa, cada abrazo, cada conversación y cada pequeño momento han hecho que lo nuestro sea especial. Me gusta mirar atrás y darme cuenta de todo lo que hemos vivido, de cómo hemos ido creando recuerdos y de todas las cosas que todavía nos faltan por conocer juntas.<br><br>
-No quiero quedarme solamente con lo que ya pasó. Quiero seguir acompañándote, aprender contigo, apoyarte en tus días buenos y en los difíciles, celebrar tus logros y construir muchos recuerdos más. Gracias por ser parte de mi vida, Alejandro. ♡
-</div>
+  <h2 class="section-title">Nuestra historia</h2>
+  <p class="lead">Desde el 25 de agosto de 2025 comenzó este capítulo que hoy quiero seguir escribiendo contigo.</p>
+  <div class="note">
+    Puede que no todo haya sido perfecto, pero cada risa, cada abrazo, cada conversación y cada pequeño momento han hecho que lo nuestro sea especial. Me gusta mirar atrás y darme cuenta de todo lo que hemos vivido, de cómo hemos ido creando recuerdos y de todas las cosas que todavía nos faltan por conocer juntas.<br><br>
+    No quiero quedarme solamente con lo que ya pasó. Quiero seguir acompañándote, aprender contigo, apoyarte en tus días buenos y en los difíciles, celebrar tus logros y construir muchos recuerdos más. Gracias por ser parte de mi vida, Alejandro. ♡
+  </div>
 </section>
 
 <section id="recuerdos">
-<h2 class="section-title">Pedacitos de nosotros</h2>
-<p class="lead">Algunos recuerdos que guardo con muchísimo cariño. Cada foto tiene un pedacito de nuestra historia.</p>
-<div class="grid">
-<div class="photo" style="--tilt:-1deg"><img src="recuerdo_1.jpeg" alt="Recuerdo juntos 1"><div class="caption">Un momento para guardar ♡</div></div>
-<div class="photo" style="--tilt:1deg"><img src="recuerdo_2.jpeg" alt="Recuerdo juntos 2"><div class="caption">De esos días que se quedan conmigo</div></div>
-<div class="photo" style="--tilt:-1deg"><img src="recuerdo_3.jpeg" alt="Recuerdo juntos 3"><div class="caption">Nosotros, tal y como somos</div></div>
-<div class="photo" style="--tilt:1deg"><img src="recuerdo_4.jpeg" alt="Un recuerdo especial"><div class="caption">Cada etapa tiene su encanto ♡</div></div>
-<div class="photo" style="--tilt:-1deg"><img src="recuerdo_5.jpeg" alt="Recuerdo juntos 5"><div class="caption">Nuestras ocurrencias</div></div>
-<div class="photo" style="--tilt:1deg"><img src="recuerdo_6.jpeg" alt="Recuerdo juntos 6"><div class="caption">Una foto más para nuestra historia</div></div>
-<div class="photo" style="--tilt:-1deg"><img src="recuerdo_7.jpeg" alt="Manos tomadas"><div class="caption">Elegir caminar de la mano</div></div>
-<div class="photo" style="--tilt:1deg"><img src="recuerdo_8.jpeg" alt="Manos tomadas"><div class="caption">Y seguir así, paso a paso ♡</div></div>
-</div>
+  <h2 class="section-title">Pedacitos de nosotros</h2>
+  <p class="lead">Algunos recuerdos que guardo con muchísimo cariño. Cada foto tiene un pedacito de nuestra historia.</p>
+  <div class="grid">
+    <div class="photo" style="--tilt:-1deg"><img src="fotos/recuerdo_1.jpeg" alt="Recuerdo juntos 1"><div class="caption">Un momento para guardar ♡</div></div>
+    <div class="photo" style="--tilt:1deg"><img src="fotos/recuerdo_2.jpeg" alt="Recuerdo juntos 2"><div class="caption">De esos días que se quedan conmigo</div></div>
+    <div class="photo" style="--tilt:-1deg"><img src="fotos/recuerdo_3.jpeg" alt="Recuerdo juntos 3"><div class="caption">Nosotros, tal y como somos</div></div>
+    <div class="photo" style="--tilt:1deg"><img src="fotos/recuerdo_4.jpeg" alt="Un recuerdo especial"><div class="caption">Cada etapa tiene su encanto ♡</div></div>
+    <div class="photo" style="--tilt:-1deg"><img src="fotos/recuerdo_5.jpeg" alt="Recuerdo juntos 5"><div class="caption">Nuestras ocurrencias</div></div>
+    <div class="photo" style="--tilt:1deg"><img src="fotos/recuerdo_6.jpeg" alt="Recuerdo juntos 6"><div class="caption">Una foto más para nuestra historia</div></div>
+    <div class="photo" style="--tilt:-1deg"><img src="fotos/recuerdo_7.jpeg" alt="Manos tomadas"><div class="caption">Elegir caminar de la mano</div></div>
+    <div class="photo" style="--tilt:1deg"><img src="fotos/recuerdo_8.jpeg" alt="Manos tomadas"><div class="caption">Y seguir así, paso a paso ♡</div></div>
+  </div>
 </section>
 
 <section id="tiempo">
-<h2 class="section-title">Nuestro tiempo</h2>
-<p class="lead">Desde aquel 25 de agosto de 2025, cada día suma una nueva parte de esta historia.</p>
-<div class="counter">
-<div class="unit"><span class="num" id="days">—</span><span class="small">Días</span></div>
-<div class="unit"><span class="num" id="months">—</span><span class="small">Meses</span></div>
-<div class="unit"><span class="num" id="years">—</span><span class="small">Años</span></div>
-</div>
-<p class="lead" style="font-style:italic">Y todavía nos quedan muchísimos momentos por vivir.</p>
+  <h2 class="section-title">Nuestro tiempo</h2>
+  <p class="lead">Desde aquel 25 de agosto de 2025, cada día suma una nueva parte de esta historia.</p>
+  <div class="counter">
+    <div class="unit"><span class="num" id="days">—</span><span class="small">Días</span></div>
+    <div class="unit"><span class="num" id="months">—</span><span class="small">Meses</span></div>
+    <div class="unit"><span class="num" id="years">—</span><span class="small">Años</span></div>
+  </div>
+  <p class="lead" style="font-style:italic">Y todavía nos quedan muchísimos momentos por vivir.</p>
 </section>
 
 <section id="cancion">
-<h2 class="section-title">Nuestra canción</h2>
-<div class="song">
-<div class="tape">♫</div>
-<p>Hay canciones que terminan convirtiéndose en recuerdos. Aquí quiero que esté esa canción que nos representa y que, cada vez que suene, nos haga pensar en nosotras.</p>
-<p style="color:#b46c86;font-style:italic">Este espacio queda esperando nuestra canción especial ♡</p>
-</div>
+  <h2 class="section-title">Nuestra canción</h2>
+  <div class="song">
+    <div class="tape">♫</div>
+    <p>Hay canciones que terminan convirtiéndose en recuerdos. Aquí quiero que esté esa canción que nos representa y que, cada vez que suene, nos haga pensar en nosotras.</p>
+    <p style="color:#b46c86;font-style:italic">Este espacio queda esperando nuestra canción especial ♡</p>
+  </div>
 </section>
 
 <div class="final">
-<div style="font-size:35px;margin-bottom:12px">♡ ♡ ♡</div>
-<h2>Quiero seguir escribiendo esta historia contigo</h2>
-<p>Gracias por cada momento, por las sonrisas, por las enseñanzas y por todo lo que hemos compartido. No sé exactamente qué nos espera, pero sí sé que quiero seguir descubriéndolo a tu lado, con paciencia, cariño y muchas ganas de que lo nuestro siga creciendo.</p>
-<button class="btn" style="background:#fff;color:#96546f" onclick="document.getElementById('respuesta').style.display='block';this.style.display='none'">Tengo algo más que decirte ♡</button>
-<div class="hidden-message" id="respuesta">Alejandro, no necesito que hoy sea un aniversario para recordarte cuánto significas para mí. Te elijo en los días sencillos y también cuando las cosas se ponen difíciles. Ojalá podamos mirar atrás dentro de mucho tiempo y sentir orgullo por todo lo que construimos. Quiero muchos más recuerdos, aventuras, risas y días a tu lado. Te quiero. — Andry ♡</div>
+  <div style="font-size:35px;margin-bottom:12px">♡ ♡ ♡</div>
+  <h2>Quiero seguir escribiendo esta historia contigo</h2>
+  <p>Gracias por cada momento, por las sonrisas, por las enseñanzas y por todo lo que hemos compartido. No sé exactamente qué nos espera, pero sí sé que quiero seguir descubriéndolo a tu lado, con paciencia, cariño y muchas ganas de que lo nuestro siga creciendo.</p>
+  <button class="btn" style="background:#fff;color:#96546f" onclick="document.getElementById('respuesta').style.display='block';this.style.display='none'">Tengo algo más que decirte ♡</button>
+  <div class="hidden-message" id="respuesta">Alejandro, no necesito que hoy sea un aniversario para recordarte cuánto significas para mí. Te elijo en los días sencillos y también cuando las cosas se ponen difíciles. Ojalá podamos mirar atrás dentro de mucho tiempo y sentir orgullo por todo lo que construimos. Quiero muchos más recuerdos, aventuras, risas y días a tu lado. Te quiero. — Andry ♡</div>
 </div>
-
 <footer>Hecho con cariño para Alejandro · Andry & Alejandro · 25.08.2025</footer>
-
 <script>
 function updateCounter(){
- const start=new Date(2025,7,25);
- const now=new Date();
- let y=now.getFullYear()-start.getFullYear();
- let m=now.getMonth()-start.getMonth();
- let d=now.getDate()-start.getDate();
+ const start=new Date(2025,7,25); const now=new Date();
+ let y=now.getFullYear()-start.getFullYear(), m=now.getMonth()-start.getMonth(), d=now.getDate()-start.getDate();
  if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}
  if(m<0){y--;m+=12}
  document.getElementById('days').textContent=Math.floor((now-start)/86400000);
