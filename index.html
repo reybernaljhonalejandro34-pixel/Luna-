@@ -1,171 +1,582 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffe8ef">
+<meta name="theme-color" content="#ffd9e8">
 <title>Nuestra historia | Andry & Alejandro</title>
+
 <style>
-:root{--pink:#f7b8cc;--soft:#fff5f7;--rose:#c86b8c;--ink:#59434c;--cream:#fffaf3;--red:#d96b83}
+:root {
+  --pink:#ffb6d2;
+  --light:#fff0f6;
+  --rose:#e85d99;
+  --dark:#91466c;
+  --ink:#68465a;
+  --white:#fffdfd;
+}
+
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
-body{margin:0;background:linear-gradient(180deg,#fff8fa,#fff1f5 48%,#fffaf5);color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+
+body{
+ margin:0;
+ color:var(--ink);
+ font-family:Georgia,serif;
+ background-color:#fff5f9;
+ background-image:
+  radial-gradient(#ffc4dc 1.5px,transparent 1.5px);
+ background-size:24px 24px;
+}
+
 button{font:inherit}
-.hero{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:34px 20px;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 20%,#fff 0 5%,transparent 6%),linear-gradient(135deg,#ffe7ef,#fff8f2)}
-.hero:before,.hero:after{content:"♡";position:absolute;color:#e99ab5;font-size:54px;opacity:.45;animation:float 5s ease-in-out infinite}
-.hero:before{top:12%;left:9%}.hero:after{right:10%;bottom:13%;animation-delay:1.4s}
-@keyframes float{50%{transform:translateY(-15px) rotate(10deg)}}
-.card{max-width:720px;width:100%;padding:38px 24px;border:1px solid #f4c6d4;border-radius:28px;background:#ffffffd9;box-shadow:0 18px 55px #b86c8620;position:relative}
-.kitty{width:96px;height:82px;margin:0 auto 14px;position:relative;background:#fff;border:2px solid #e9dfe1;border-radius:48% 48% 44% 44%;box-shadow:0 5px 14px #b86c8620}
-.kitty:before,.kitty:after{content:"";position:absolute;top:-8px;width:34px;height:34px;background:#fff;border:2px solid #e9dfe1;z-index:-1}
-.kitty:before{left:4px;transform:rotate(-28deg);clip-path:polygon(0 0,100% 18%,76% 100%,20% 80%)}
-.kitty:after{right:4px;transform:rotate(28deg);clip-path:polygon(0 18%,100% 0,80% 80%,24% 100%)}
-.eye{position:absolute;top:37px;width:6px;height:9px;border-radius:50%;background:#57444a}.eye.l{left:28px}.eye.r{right:28px}
-.nose{position:absolute;top:46px;left:45px;width:8px;height:6px;border-radius:50%;background:#e9b34f}
-.whisk{position:absolute;top:49px;width:19px;height:1px;background:#b9a6ab}.whisk.l{left:7px;transform:rotate(8deg)}.whisk.r{right:7px;transform:rotate(-8deg)}
-.bow{position:absolute;right:-11px;top:0;width:32px;height:20px;background:#e985a8;border:2px solid #d76f94;border-radius:50% 50% 45% 45%;transform:rotate(15deg)}
-.bow:after{content:"";position:absolute;width:8px;height:8px;background:#f8c4d4;border:1px solid #d76f94;border-radius:50%;left:10px;top:4px}
-.eyebrow{font:12px Arial,sans-serif;letter-spacing:4px;text-transform:uppercase;color:#bd718b}
-h1{font-size:clamp(36px,8vw,62px);font-weight:normal;line-height:1.05;margin:14px 0;color:#9e5571}
-.subtitle{font-size:19px;line-height:1.7;max-width:540px;margin:0 auto 24px}
-.btn{border:0;border-radius:999px;background:#c96f8e;color:white;padding:14px 27px;cursor:pointer;box-shadow:0 7px 18px #c96f8e35;transition:.2s}
-.btn:hover{transform:translateY(-2px);background:#b95d7e}
-section{padding:66px 20px;max-width:980px;margin:auto}
-.section-title{text-align:center;font-size:clamp(28px,5vw,40px);font-weight:normal;color:#a85c78;margin:0 0 12px}
-.lead{text-align:center;max-width:680px;margin:0 auto 30px;line-height:1.8;font-size:17px}
-.note{background:#fff;border:1px solid #f4d5df;border-radius:22px;padding:28px;box-shadow:0 10px 35px #9c657515;line-height:1.9;font-size:18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:17px}
-.photo{background:white;padding:10px 10px 18px;border-radius:16px;box-shadow:0 9px 24px #8053661b;transform:rotate(var(--tilt,0deg));}
-.photo img{width:100%;height:290px;object-fit:cover;border-radius:10px;display:block}
-.caption{text-align:center;margin:12px 4px 0;font-style:italic;color:#946075}
-.counter{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:26px 0}
-.unit{background:#fff;border:1px solid #f1cbd7;border-radius:18px;min-width:105px;padding:17px 14px;text-align:center;box-shadow:0 8px 22px #9c657510}
-.num{display:block;font: bold 32px Arial,sans-serif;color:#bd6686}.small{font:11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#946075}
-.song{max-width:650px;margin:auto;text-align:center;background:#fff;border:1px dashed #df9db4;border-radius:22px;padding:28px;line-height:1.8}
-.tape{font-size:48px;margin-bottom:8px}
-.final{background:linear-gradient(145deg,#6b4656,#9b6278);color:#fff7fa;text-align:center;padding:72px 22px;border-radius:30px;margin:25px 20px 65px}
-.final h2{font-size:clamp(30px,6vw,46px);font-weight:normal;margin:0 0 18px}
-.final p{font-size:18px;line-height:1.8;max-width:650px;margin:0 auto 25px}
-.hidden-message{display:none;background:#fff8fa;color:#875269;border-radius:18px;padding:22px;max-width:650px;margin:22px auto 0;line-height:1.8}
-footer{text-align:center;padding:25px;color:#a77c8c;font-size:13px}
-@media(max-width:560px){.card{padding:30px 18px}.photo img{height:260px}section{padding:52px 17px}}
+
+.hero{
+ min-height:100svh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:35px 18px;
+ background:linear-gradient(135deg,#ffd6e7,#fff3f8,#ffe1ed);
+ position:relative;
+ overflow:hidden;
+}
+
+.hero:before,.hero:after{
+ content:"♡";
+ position:absolute;
+ color:#e979a8;
+ font-size:85px;
+ opacity:.5;
+ animation:float 4s infinite ease-in-out;
+}
+
+.hero:before{top:8%;left:8%}
+.hero:after{bottom:8%;right:8%;animation-delay:1s}
+
+@keyframes float{
+ 50%{transform:translateY(-15px) rotate(12deg)}
+}
+
+.card{
+ max-width:720px;
+ width:100%;
+ padding:38px 24px;
+ border:3px solid white;
+ border-radius:35px;
+ background:#ffffffed;
+ box-shadow:0 15px 40px #d76b9630;
+ position:relative;
+}
+
+.card:before{
+ content:"🎀";
+ position:absolute;
+ top:-28px;
+ right:25px;
+ font-size:45px;
+}
+
+.kitty{
+ width:115px;
+ height:95px;
+ margin:15px auto 25px;
+ position:relative;
+ background:white;
+ border:3px solid #e7c8d5;
+ border-radius:48%;
+ box-shadow:0 5px 15px #c77a9825;
+}
+
+.kitty:before,.kitty:after{
+ content:"";
+ position:absolute;
+ top:-12px;
+ width:40px;
+ height:42px;
+ background:white;
+ border:3px solid #e7c8d5;
+ z-index:-1;
+}
+
+.kitty:before{
+ left:3px;
+ transform:rotate(-25deg);
+ clip-path:polygon(0 0,100% 18%,76% 100%,20% 80%);
+}
+
+.kitty:after{
+ right:3px;
+ transform:rotate(25deg);
+ clip-path:polygon(0 18%,100% 0,80% 80%,24% 100%);
+}
+
+.eye{
+ position:absolute;
+ top:42px;
+ width:7px;
+ height:11px;
+ border-radius:50%;
+ background:#44333b;
+}
+
+.eye.l{left:31px}
+.eye.r{right:31px}
+
+.nose{
+ position:absolute;
+ top:53px;
+ left:53px;
+ width:9px;
+ height:7px;
+ border-radius:50%;
+ background:#f0bd43;
+}
+
+.whisk{
+ position:absolute;
+ top:55px;
+ width:20px;
+ height:2px;
+ background:#b99ca9;
+}
+
+.whisk.l{left:7px}
+.whisk.r{right:7px}
+
+.bow{
+ position:absolute;
+ right:-18px;
+ top:-10px;
+ width:38px;
+ height:25px;
+ background:#f36b9f;
+ border:2px solid #d94c83;
+ border-radius:50%;
+ transform:rotate(15deg);
+}
+
+.bow:before{
+ content:"";
+ position:absolute;
+ width:13px;
+ height:13px;
+ background:#ffc1d9;
+ border:2px solid #d94c83;
+ border-radius:50%;
+ left:10px;
+ top:4px;
+}
+
+.eyebrow{
+ font:12px Arial,sans-serif;
+ letter-spacing:4px;
+ text-transform:uppercase;
+ color:#d45c91;
+}
+
+h1{
+ font-size:clamp(36px,8vw,62px);
+ font-weight:normal;
+ line-height:1.1;
+ margin:15px 0;
+ color:#cf568b;
+}
+
+.subtitle{
+ font-size:19px;
+ line-height:1.7;
+ max-width:540px;
+ margin:0 auto 25px;
+}
+
+.btn{
+ border:2px solid white;
+ border-radius:999px;
+ background:#ed78a7;
+ color:white;
+ padding:14px 27px;
+ cursor:pointer;
+ box-shadow:0 7px 18px #c96f8e35;
+ transition:.2s;
+}
+
+.btn:hover{
+ transform:translateY(-3px);
+ background:#d9568e;
+}
+
+section{
+ padding:65px 20px;
+ max-width:980px;
+ margin:auto;
+}
+
+.section-title{
+ text-align:center;
+ font-size:clamp(28px,5vw,40px);
+ font-weight:normal;
+ color:#d45c91;
+ margin:0 0 12px;
+}
+
+.section-title:after{
+ content:"  🎀";
+ font-size:25px;
+}
+
+.lead{
+ text-align:center;
+ max-width:680px;
+ margin:0 auto 30px;
+ line-height:1.8;
+ font-size:17px;
+}
+
+.note{
+ background:white;
+ border:2px dashed #f2a6c5;
+ border-radius:25px;
+ padding:28px;
+ box-shadow:0 10px 30px #9c657515;
+ line-height:1.9;
+ font-size:18px;
+ position:relative;
+}
+
+.note:before{
+ content:"💗";
+ position:absolute;
+ top:-20px;
+ left:20px;
+ font-size:32px;
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:22px;
+}
+
+.photo{
+ background:white;
+ padding:12px 12px 20px;
+ border:2px solid #ffd2e3;
+ border-radius:22px;
+ box-shadow:0 9px 24px #8053661b;
+ transform:rotate(var(--tilt,0deg));
+ transition:.3s;
+}
+
+.photo:hover{transform:rotate(0) scale(1.03)}
+
+.photo img{
+ width:100%;
+ height:290px;
+ object-fit:cover;
+ border-radius:15px;
+ display:block;
+}
+
+.caption{
+ text-align:center;
+ margin:13px 4px 0;
+ font-style:italic;
+ color:#b65380;
+}
+
+.counter{
+ display:flex;
+ justify-content:center;
+ gap:12px;
+ flex-wrap:wrap;
+ margin:26px 0;
+}
+
+.unit{
+ background:white;
+ border:2px solid #f5c2d7;
+ border-radius:22px;
+ min-width:105px;
+ padding:18px 14px;
+ text-align:center;
+ box-shadow:0 8px 22px #9c657510;
+}
+
+.num{
+ display:block;
+ font:bold 32px Arial,sans-serif;
+ color:#e15d97;
+}
+
+.small{
+ font:11px Arial,sans-serif;
+ letter-spacing:2px;
+ text-transform:uppercase;
+ color:#946075;
+}
+
+.song{
+ max-width:650px;
+ margin:auto;
+ text-align:center;
+ background:white;
+ border:2px dashed #ed9cbb;
+ border-radius:25px;
+ padding:28px;
+ line-height:1.8;
+}
+
+.song iframe{
+ border-radius:18px;
+}
+
+.final{
+ background:linear-gradient(145deg,#ec8bb2,#d95f98);
+ color:white;
+ text-align:center;
+ padding:65px 22px;
+ border:5px solid white;
+ border-radius:35px;
+ margin:25px 20px 65px;
+ box-shadow:0 12px 30px #d76b9630;
+}
+
+.final h2{
+ font-size:clamp(30px,6vw,46px);
+ font-weight:normal;
+ margin:0 0 18px;
+}
+
+.final p{
+ font-size:18px;
+ line-height:1.8;
+ max-width:650px;
+ margin:0 auto 25px;
+}
+
+.hidden-message{
+ display:none;
+ background:#fff8fb;
+ color:#96546f;
+ border:2px dashed #f3a9c6;
+ border-radius:20px;
+ padding:22px;
+ max-width:650px;
+ margin:22px auto 0;
+ line-height:1.8;
+}
+
+footer{
+ text-align:center;
+ padding:25px;
+ color:#b45c83;
+ font-size:13px;
+}
+
+@media(max-width:560px){
+ .card{padding:30px 18px}
+ .photo img{height:260px}
+ section{padding:52px 17px}
+}
 </style>
 </head>
+
 <body>
+
 <header class="hero" id="inicio">
-  <div class="card">
-    <div class="kitty" aria-label="gatita con moño decorativa"><span class="eye l"></span><span class="eye r"></span><span class="nose"></span><span class="whisk l"></span><span class="whisk r"></span><span class="bow"></span></div>
-    <div class="eyebrow">Un detalle hecho con amor</div>
-    <h1>Andry <span style="font-size:.55em;color:#d78aa4">&</span> Alejandro</h1>
-    <p class="subtitle">No es una fecha especial. Es una forma de recordarte lo bonito que ha sido encontrarte y lo mucho que deseo seguir compartiendo momentos contigo. ♡</p>
-    <button class="btn" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">Descubre nuestra historia ♡</button>
+ <div class="card">
+
+  <div class="kitty" aria-label="Gatita decorativa">
+   <span class="eye l"></span>
+   <span class="eye r"></span>
+   <span class="nose"></span>
+   <span class="whisk l"></span>
+   <span class="whisk r"></span>
+   <span class="bow"></span>
   </div>
+
+  <div class="eyebrow">Un detalle hecho con amor 🎀</div>
+
+  <h1>Andry <span style="font-size:.55em;color:#e78eaf">&</span> Alejandro</h1>
+
+  <p class="subtitle">
+   No es una fecha especial. Es una forma de recordarte lo bonito que ha sido encontrarte y lo mucho que deseo seguir compartiendo momentos contigo. ♡
+  </p>
+
+  <button class="btn" onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+   Descubre nuestra historia ♡
+  </button>
+
+ </div>
 </header>
 
 <section id="historia">
-  <h2 class="section-title">Nuestra historia</h2>
-  <p class="lead">Desde el 25 de agosto de 2025 comenzó este capítulo que hoy quiero seguir escribiendo contigo.</p>
-  <div class="note">
-    Puede que no todo haya sido perfecto, pero cada risa, cada abrazo, cada conversación y cada pequeño momento han hecho que lo nuestro sea especial. Me gusta mirar atrás y darme cuenta de todo lo que hemos vivido, de cómo hemos ido creando recuerdos y de todas las cosas que todavía nos faltan por conocer juntas.<br><br>
-    No quiero quedarme solamente con lo que ya pasó. Quiero seguir acompañándote, aprender contigo, apoyarte en tus días buenos y en los difíciles, celebrar tus logros y construir muchos recuerdos más. Gracias por ser parte de mi vida, Alejandro. ♡
-  </div>
+ <h2 class="section-title">Nuestra historia</h2>
+
+ <p class="lead">
+  Desde el 25 de agosto de 2025 comenzó este capítulo que hoy quiero seguir escribiendo contigo.
+ </p>
+
+ <div class="note">
+  Puede que no todo haya sido perfecto, pero cada risa, cada abrazo, cada conversación y cada pequeño momento han hecho que lo nuestro sea especial. Me gusta mirar atrás y darme cuenta de todo lo que hemos vivido, de cómo hemos ido creando recuerdos y de todas las cosas que todavía nos faltan por conocer juntas.
+  <br><br>
+  No quiero quedarme solamente con lo que ya pasó. Quiero seguir acompañándote, aprender contigo, apoyarte en tus días buenos y en los difíciles, celebrar tus logros y construir muchos recuerdos más. Gracias por ser parte de mi vida, Alejandro. ♡
+ </div>
 </section>
 
 <section id="recuerdos">
-  <h2 class="section-title">Pedacitos de nosotros</h2>
-  <p class="lead">Algunos recuerdos que guardo con muchísimo cariño. Cada foto tiene un pedacito de nuestra historia.</p>
-  <div class="grid">
-    
-<div class="photo" style="--tilt:-1deg">
-  <img src="recuerdo_1.jpeg" alt="Recuerdo juntos 1">
-  <div class="caption">Un momento para guardar ♡</div>
-</div>
+ <h2 class="section-title">Pedacitos de nosotros</h2>
 
-<div class="photo" style="--tilt:1deg">
-  <img src="recuerdo_2.jpeg" alt="Recuerdo juntos 2">
-  <div class="caption">De esos días que se quedan conmigo</div>
-</div>
+ <p class="lead">
+  Algunos recuerdos que guardo con muchísimo cariño. Cada foto tiene un pedacito de nuestra historia.
+ </p>
 
-<div class="photo" style="--tilt:-1deg">
-  <img src="recuerdo_3.jpeg" alt="Recuerdo juntos 3">
-  <div class="caption">Nosotros, tal y como somos</div>
-</div>
+ <div class="grid">
 
-<div class="photo" style="--tilt:1deg">
-  <img src="recuerdo_4.jpeg" alt="Un recuerdo especial">
-  <div class="caption">Cada etapa tiene su encanto ♡</div>
-</div>
-
-<div class="photo" style="--tilt:-1deg">
-  <img src="recuerdo_5.jpeg" alt="Recuerdo juntos 5">
-  <div class="caption">Nuestras ocurrencias</div>
-</div>
-
-<div class="photo" style="--tilt:1deg">
-  <img src="recuerdo_6.jpeg" alt="Recuerdo juntos 6">
-  <div class="caption">Una foto más para nuestra historia</div>
-</div>
-
-<div class="photo" style="--tilt:-1deg">
-  <img src="recuerdo_7.jpeg" alt="Manos tomadas">
-  <div class="caption">Elegir caminar de la mano</div>
-</div>
-
-<div class="photo" style="--tilt:1deg">
-  <img src="recuerdo_8.jpeg" alt="Manos tomadas">
-  <div class="caption">Y seguir así, paso a paso ♡</div>
-</div>
-
+  <div class="photo" style="--tilt:-1deg">
+   <img src="recuerdo_1.jpeg" alt="Recuerdo juntos 1">
+   <div class="caption">Un momento para guardar ♡</div>
   </div>
+
+  <div class="photo" style="--tilt:1deg">
+   <img src="recuerdo_2.jpeg" alt="Recuerdo juntos 2">
+   <div class="caption">De esos días que se quedan conmigo</div>
+  </div>
+
+  <div class="photo" style="--tilt:-1deg">
+   <img src="recuerdo_3.jpeg" alt="Recuerdo juntos 3">
+   <div class="caption">Nosotros, tal y como somos</div>
+  </div>
+
+  <div class="photo" style="--tilt:1deg">
+   <img src="recuerdo_4.jpeg" alt="Un recuerdo especial">
+   <div class="caption">Cada etapa tiene su encanto ♡</div>
+  </div>
+
+  <div class="photo" style="--tilt:-1deg">
+   <img src="recuerdo_5.jpeg" alt="Recuerdo juntos 5">
+   <div class="caption">Nuestras ocurrencias</div>
+  </div>
+
+  <div class="photo" style="--tilt:1deg">
+   <img src="recuerdo_6.jpeg" alt="Recuerdo juntos 6">
+   <div class="caption">Una foto más para nuestra historia</div>
+  </div>
+
+  <div class="photo" style="--tilt:-1deg">
+   <img src="recuerdo_7.jpeg" alt="Manos tomadas">
+   <div class="caption">Elegir caminar de la mano</div>
+  </div>
+
+  <div class="photo" style="--tilt:1deg">
+   <img src="recuerdo_8.jpeg" alt="Manos tomadas">
+   <div class="caption">Y seguir así, paso a paso ♡</div>
+  </div>
+
+ </div>
 </section>
 
 <section id="tiempo">
-  <h2 class="section-title">Nuestro tiempo</h2>
-  <p class="lead">Desde aquel 25 de agosto de 2025, cada día suma una nueva parte de esta historia.</p>
-  <div class="counter">
-    <div class="unit"><span class="num" id="days">—</span><span class="small">Días</span></div>
-    <div class="unit"><span class="num" id="months">—</span><span class="small">Meses</span></div>
-    <div class="unit"><span class="num" id="years">—</span><span class="small">Años</span></div>
+ <h2 class="section-title">Nuestro tiempo</h2>
+
+ <p class="lead">
+  Desde aquel 25 de agosto de 2025, cada día suma una nueva parte de esta historia.
+ </p>
+
+ <div class="counter">
+  <div class="unit">
+   <span class="num" id="days">—</span>
+   <span class="small">Días</span>
   </div>
-  <p class="lead" style="font-style:italic">Y todavía nos quedan muchísimos momentos por vivir.</p>
+
+  <div class="unit">
+   <span class="num" id="months">—</span>
+   <span class="small">Meses</span>
+  </div>
+
+  <div class="unit">
+   <span class="num" id="years">—</span>
+   <span class="small">Años</span>
+  </div>
+ </div>
+
+ <p class="lead" style="font-style:italic">
+  Y todavía nos quedan muchísimos momentos por vivir. ♡
+ </p>
 </section>
 
 <section id="cancion">
-<div class="song">
-  <h2>🎶 Nuestra canción especial</h2>
+ <div class="song">
+  <h2 class="section-title">Nuestra canción especial 🎀</h2>
   <p>Ella es mi todo ❤️</p>
 
   <iframe
-    width="100%"
-    height="250"
-    src="https://www.youtube.com/embed/jZip5MtKS0A"
-    title="Ella es mi todo - Kaleth Morales"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
+   width="100%"
+   height="250"
+   src="https://www.youtube.com/embed/jZip5MtKS0A"
+   title="Ella es mi todo - Kaleth Morales"
+   frameborder="0"
+   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+   allowfullscreen>
   </iframe>
+ </div>
+</section>
+
+<div class="final">
+ <div style="font-size:40px;margin-bottom:12px">🎀 ♡ 🎀</div>
+
+ <h2>Quiero seguir escribiendo esta historia contigo</h2>
+
+ <p>
+  Gracias por cada momento, por las sonrisas, por las enseñanzas y por todo lo que hemos compartido. No sé exactamente qué nos espera, pero sí sé que quiero seguir descubriéndolo a tu lado, con paciencia, cariño y muchas ganas de que lo nuestro siga creciendo.
+ </p>
+
+ <button class="btn" style="background:white;color:#b94e80"
+  onclick="document.getElementById('respuesta').style.display='block';this.style.display='none'">
+  Tengo algo más que decirte ♡
+ </button>
+
+ <div class="hidden-message" id="respuesta">
+  Alejandro, no necesito que hoy sea un aniversario para recordarte cuánto significas para mí. Te elijo en los días sencillos y también cuando las cosas se ponen difíciles. Ojalá podamos mirar atrás dentro de mucho tiempo y sentir orgullo por todo lo que construimos. Quiero muchos más recuerdos, aventuras, risas y días a tu lado. Te quiero. — Andry ♡
+ </div>
 </div>
 
+<footer>
+ Hecho con cariño para Alejandro · Andry & Alejandro · 25.08.2025 🎀
+</footer>
 
-
-  <div style="font-size:35px;margin-bottom:12px">♡ ♡ ♡</div>
-  <h2>Quiero seguir escribiendo esta historia contigo</h2>
-  <p>Gracias por cada momento, por las sonrisas, por las enseñanzas y por todo lo que hemos compartido. No sé exactamente qué nos espera, pero sí sé que quiero seguir descubriéndolo a tu lado, con paciencia, cariño y muchas ganas de que lo nuestro siga creciendo.</p>
-  <button class="btn" style="background:#fff;color:#96546f" onclick="document.getElementById('respuesta').style.display='block';this.style.display='none'">Tengo algo más que decirte ♡</button>
-  <div class="hidden-message" id="respuesta">Alejandro, no necesito que hoy sea un aniversario para recordarte cuánto significas para mí. Te elijo en los días sencillos y también cuando las cosas se ponen difíciles. Ojalá podamos mirar atrás dentro de mucho tiempo y sentir orgullo por todo lo que construimos. Quiero muchos más recuerdos, aventuras, risas y días a tu lado. Te quiero. — Andry ♡</div>
-</div>
-<footer>Hecho con cariño para Alejandro · Andry & Alejandro · 25.08.2025</footer>
 <script>
 function updateCounter(){
- const start=new Date(2025,7,25); const now=new Date();
- let y=now.getFullYear()-start.getFullYear(), m=now.getMonth()-start.getMonth(), d=now.getDate()-start.getDate();
- if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}
- if(m<0){y--;m+=12}
- document.getElementById('days').textContent=Math.floor((now-start)/86400000);
+ const start=new Date(2025,7,25);
+ const now=new Date();
+
+ let y=now.getFullYear()-start.getFullYear();
+ let m=now.getMonth()-start.getMonth();
+ let d=now.getDate()-start.getDate();
+
+ if(d<0){
+  m--;
+  d+=new Date(now.getFullYear(),now.getMonth(),0).getDate();
+ }
+
+ if(m<0){
+  y--;
+  m+=12;
+ }
+
+ document.getElementById('days').textContent=
+  Math.floor((now-start)/86400000);
+
  document.getElementById('months').textContent=y*12+m;
  document.getElementById('years').textContent=y;
 }
+
 updateCounter();
 </script>
+
 </body>
 </html>
